@@ -46,7 +46,8 @@ public class ValidationItemControllerV2 {
         return "validation/v2/addForm";
     }
 
-    // BindingResult를 ModelAttribute 뒤에 (순서 중요)
+    // BindingResult를 ModelAttribute 뒤에 (순서 중요), model에 자동으로 포함
+    // BindingResult가 있으면 오류 정보를 BindingResult에 담아서 컨트롤러 호출
     @PostMapping("/add")
     public String addItemV1(@ModelAttribute Item item, BindingResult bindingResult, RedirectAttributes redirectAttributes, Model model) {
 
