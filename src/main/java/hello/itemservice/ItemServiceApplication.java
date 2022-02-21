@@ -13,6 +13,7 @@ public class ItemServiceApplication implements WebMvcConfigurer {
 		SpringApplication.run(ItemServiceApplication.class, args);
 	}
 
+//	직접 글로벌 Validator를 직접 등록하면 스프링 부트는 Bean Validator를 글로벌 Validator로 등록하지 않음
 //	글로벌 설정
 //	public class ItemServiceApplication implements WebMvcConfigurer
 //	@Override
